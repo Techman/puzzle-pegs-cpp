@@ -154,7 +154,7 @@ bool PuzzlePegs::solve_internal(std::vector<char>& board)
 
 			// Record the board in history of boards
 			auto clone = board;
-			boards.emplace_back(clone);
+			boards.push_back(std::move(clone));
 
 			// Call ourselves recurisvely. If we return true then the conclusion was good. If it was
 			// false, we hit a dead end and we shouldn't print the move
@@ -163,7 +163,7 @@ bool PuzzlePegs::solve_internal(std::vector<char>& board)
 				// Record the jump
 				std::stringstream ss;
 				ss << "Moved " << move[0] << " to " << move[2] << ", jumping over " << move[1];
-				jumps.emplace_back(std::move(ss.str()));
+				jumps.push_back(std::move(ss.str()));
 				return true;
 			}
 
