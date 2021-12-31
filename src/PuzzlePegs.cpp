@@ -143,7 +143,7 @@ bool PuzzlePegs::solve_internal(std::vector<char>& board)
 	// For every move in the table of possible moves...
 	for (const auto& move : MOVES)
 	{
-		// See if we can match a PPH pattern. If we can, try following htis route by calling
+		// See if we can match a PPH pattern. If we can, try following this route by calling
 		// ourselves again with this modified board
 		if ((board[move[0]] == PEG) && (board[move[1]] == PEG) && (board[move[2]] == HOLE))
 		{
