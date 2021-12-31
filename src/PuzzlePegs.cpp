@@ -51,9 +51,9 @@ int PuzzlePegs::count(const std::vector<T>& vector, const T& value)
 
 void PuzzlePegs::help()
 {
-	std::cout << "Usage: ./PuzzlePegs [hole] [ending peg]" << std::endl;
-	std::cout << "hole: the location of the starting hole in the board, e.g. 13" << std::endl;
-	std::cout << "ending peg: the location of the last peg, e.g. 13" << std::endl;
+	std::cout << "Usage: ./PuzzlePegs [hole] [ending peg]" << '\n';
+	std::cout << "hole: the location of the starting hole in the board, e.g. 13" << '\n';
+	std::cout << "ending peg: the location of the last peg, e.g. 13" << '\n';
 }
 
 void PuzzlePegs::print_board(const std::vector<char>& board)
@@ -120,7 +120,7 @@ void PuzzlePegs::solve()
 	// Now, solve the puzzle!
 	if (solve_internal(board))
 	{
-		std::cout << "Initial board" << std::endl;
+		std::cout << "Initial board" << '\n';
 		print_board(original);
 
 		// Print the moves and board to the output. The moves (jumps) are in reverse order due to the
@@ -128,13 +128,13 @@ void PuzzlePegs::solve()
 		std::reverse(jumps.begin(), jumps.end());
 		for (std::size_t i = 0; i < boards.size(); ++i)
 		{
-			std::cout << jumps[i] << std::endl;
+			std::cout << jumps[i] << '\n';
 			print_board(boards[i]);
 		}
 	}
 	else
 	{
-		std::cout << "No solution could be found for this combination" << std::endl;
+		std::cout << "No solution could be found for this combination" << '\n';
 	}
 }
 

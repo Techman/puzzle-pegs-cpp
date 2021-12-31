@@ -62,14 +62,14 @@ int main(int argc, char *argv[])
 
 		// Catch-all for improper input
 		default:
-			std::cerr << "Too many arguments" << std::endl;
+			std::cerr << "Too many arguments" << '\n';
 			PuzzlePegs::help();
 			return EXIT_FAILURE;
 		}
 	}
 	catch (std::invalid_argument &e)
 	{
-		std::cerr << "Invalid input. Please use integers as numeric input" << std::endl;
+		std::cerr << "Invalid input. Please use integers as numeric input" << '\n';
 		PuzzlePegs::help();
 		return EXIT_FAILURE;
 	}
@@ -77,13 +77,13 @@ int main(int argc, char *argv[])
 	// Sanitize the actual numbers put in
 	if (!between_inclusive(1, 15, starting_hole_location))
 	{
-		std::cerr << "Invalid input. Valid pegs/holes range from 1 to 15, inclusive" << std::endl;
+		std::cerr << "Invalid input. Valid pegs/holes range from 1 to 15, inclusive" << '\n';
 		PuzzlePegs::help();
 		return 1;
 	}
 	if (!between_inclusive(1, 15, ending_peg_location) && (ending_peg_location != -1))
 	{
-		std::cerr << "Invalid input. Valid pegs/holes range from 1 to 15, inclusive" << std::endl;
+		std::cerr << "Invalid input. Valid pegs/holes range from 1 to 15, inclusive" << '\n';
 		PuzzlePegs::help();
 		return 1;
 	}
