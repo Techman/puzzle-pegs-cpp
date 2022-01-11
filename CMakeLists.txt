@@ -6,4 +6,4 @@ project(PuzzlePegs)
 # Include directories
 include_directories(include)
 # target_include_directories(PuzzlePegs PUBLIC ${CMAKE_SOURCE_DIR}/include)
-add_subdirectory(src bin)
+add_subdirectory(src)
