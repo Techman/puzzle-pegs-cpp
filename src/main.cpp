@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 			return EXIT_FAILURE;
 		}
 	}
-	catch (std::invalid_argument &e)
+	catch (std::invalid_argument &)
 	{
 		std::cerr << "Invalid input. Please use integers as numeric input" << '\n';
 		PuzzlePegs::help();
