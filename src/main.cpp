@@ -30,7 +30,7 @@
 template<typename T>
 bool between_inclusive(const T& lower, const T& upper, const T& value);
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
 	int starting_hole_location;
 	int ending_peg_location;
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 			return EXIT_FAILURE;
 		}
 	}
-	catch (std::invalid_argument &)
+	catch (std::invalid_argument&)
 	{
 		std::cerr << "Invalid input. Please use integers as numeric input" << '\n';
 		PuzzlePegs::help();

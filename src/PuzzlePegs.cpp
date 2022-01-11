@@ -32,7 +32,6 @@ bool PuzzlePegs::check_between_inclusive(const T& lower, const T& upper, const T
 	{
 		return false;
 	}
-
 }
 
 template<typename T>
@@ -77,7 +76,8 @@ PuzzlePegs::PuzzlePegs(int start_pos, int end_pos)
 	// end_pos can be -1 if the location is not important
 	if (!check_between_inclusive(1, 15, end_pos) && (end_pos != -1))
 	{
-		throw std::invalid_argument("Ending peg location must be an integer from 1 to 15 (inclusive) or -1 if location does not matter");
+		throw std::invalid_argument(
+			"Ending peg location must be an integer from 1 to 15 (inclusive) or -1 if location does not matter");
 	}
 
 	// With the starting hole and ending peg specified, try to solve for a board with these constraints

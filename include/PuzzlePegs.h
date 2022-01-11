@@ -32,6 +32,7 @@ private:
 
 	// Universal table of moves
 	// This is only valid for 15-hole boards of triangular shape
+	// clang-format off
 	const std::vector<std::vector<int>> MOVES = {
 		{1, 2, 4},
 		{1, 3, 6},
@@ -70,6 +71,7 @@ private:
 		{15, 10, 6},
 		{15, 14, 13}
 	};
+	// clang-format on
 
 	// History of boards representing the jumps
 	std::vector<std::vector<char>> boards;
@@ -123,8 +125,8 @@ public:
 	 * @brief Create a puzzle with a starting hole and ending peg location specified
 	 * @param start_pos Starting position of hole
 	 * @param end_pos Ending position of final peg
-	 * @exception std::invalid_argument If start_pos or end_pos are not between 1 to 15 inclusive, or -1 in the case of end_pos
-	 * (end_pos can be -1 when the final peg location does not matter)
+	 * @exception std::invalid_argument If start_pos or end_pos are not between 1 to 15 inclusive, or -1 in the case of
+	 * end_pos (end_pos can be -1 when the final peg location does not matter)
 	 */
 	PuzzlePegs(int start_pos, int end_pos);
 
