@@ -34,20 +34,6 @@ bool PuzzlePegs::check_between_inclusive(const T& lower, const T& upper, const T
 	}
 }
 
-template<typename T>
-int PuzzlePegs::count(const std::vector<T>& vector, const T& value)
-{
-	int count = 0;
-	for (const T& item : vector)
-	{
-		if (item == value)
-		{
-			count++;
-		}
-	}
-	return count;
-}
-
 void PuzzlePegs::help()
 {
 	std::cout << "Usage: ./PuzzlePegs [hole] [ending peg]" << '\n';

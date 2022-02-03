@@ -96,14 +96,6 @@ private:
 	bool check_between_inclusive(const T& lower, const T& upper, const T& value);
 
 	/**
-	 * @brief Count occurances of a value within a range, inclusive
-	 * @param vector Vector of values
-	 * @param value The value to check against
-	 */
-	template<typename T>
-	int count(const std::vector<T>& vector, const T& value);
-
-	/**
 	 * @brief Print the game board in ASCII form
 	 * @param board The game board
 	 */
